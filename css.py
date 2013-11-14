@@ -18,7 +18,8 @@ class CSS(Linter):
         r'(?i)^.+: (?:line (?P<line>\d+), col (?P<col>\d+), )?'
         r'(?P<type>(?:error|warning)) - (?P<error>.*)$'
     )
-    tempfile_suffix = '.css'
+    word_re = r'^(#?[-\w]+)'
+    tempfile_suffix = 'css'
 
     def split_match(self, match):
         match, row, col, error_type, error, near = super().split_match(match)
@@ -30,3 +31,8 @@ class CSS(Linter):
             col = 0
 
         return match, row, col, error_type, error, near
+
+
+class EmbeddedCSS(CSS):
+    language = 'html'
+    selector = 'source.css.embedded.html'
