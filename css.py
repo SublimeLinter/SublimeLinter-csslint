@@ -8,16 +8,24 @@
 # License: MIT
 #
 
+import re
+
 from SublimeLinter.lint import Linter
 
 
 class CSS(Linter):
     language = 'css'
     cmd = ('csslint', '--format=compact')
-    regex = (
-        r'(?i)^.+: (?:line (?P<line>\d+), col (?P<col>\d+), )?'
-        r'(?P<type>(?:error|warning)) - (?P<error>.*)$'
-    )
+    regex = r'''
+        ^.+:\s*   # filename
+
+        # csslint emits errors that pertain to the code as a whole,
+        # in which case there is no line/col information, so that
+        # part is optional.
+        (?:line\ (?P<line>\d+),\ col\ (?P<col>\d+),\ )?
+        (?P<type>error|warning)\ -\ (?P<error>.*)$
+    '''
+    re_flags = re.VERBOSE | re.IGNORECASE
     word_re = r'^(#?[-\w]+)'
     tempfile_suffix = 'css'
 
