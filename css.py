@@ -15,7 +15,7 @@ from SublimeLinter.lint import Linter
 
 class CSS(Linter):
     language = 'css'
-    cmd = ('csslint', '--format=compact')
+    cmd = 'csslint --format=compact'
     regex = r'''
         ^.+:\s*   # filename
 
