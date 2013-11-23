@@ -23,14 +23,14 @@ class CSS(Linter):
         # in which case there is no line/col information, so that
         # part is optional.
         (?:line\ (?P<line>\d+),\ col\ (?P<col>\d+),\ )?
-        (?P<type>error|warning)\ -\ (?P<error>.*)$
+        (?:(?P<error>error)|(?P<warning>warning))\ -\ (?P<message>.*)$
     '''
     re_flags = re.VERBOSE | re.IGNORECASE
     word_re = r'^(#?[-\w]+)'
     tempfile_suffix = 'css'
 
     def split_match(self, match):
-        match, row, col, error_type, error, near = super().split_match(match)
+        match, row, col, error, warning, message, near = super().split_match(match)
 
         # csslint can give general errors that apply to the document as a whole.
         # In that case we pin them to the beginning of the document.
@@ -38,7 +38,7 @@ class CSS(Linter):
             row = 0
             col = 0
 
-        return match, row, col, error_type, error, near
+        return match, row, col, error, warning, message, near
 
 
 class EmbeddedCSS(CSS):
