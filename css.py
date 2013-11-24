@@ -14,7 +14,7 @@ from SublimeLinter.lint import Linter
 
 
 class CSS(Linter):
-    language = 'css'
+    language = ('css', 'html')
     cmd = 'csslint --format=compact'
     regex = r'''
         ^.+:\s*   # filename
@@ -28,19 +28,17 @@ class CSS(Linter):
     re_flags = re.VERBOSE | re.IGNORECASE
     word_re = r'^(#?[-\w]+)'
     tempfile_suffix = 'css'
+    selectors = {
+        'html': 'source.css.embedded.html'
+    }
 
     def split_match(self, match):
         match, row, col, error, warning, message, near = super().split_match(match)
 
         # csslint can give general errors that apply to the document as a whole.
         # In that case we pin them to the beginning of the document.
-        if row is None and error:
+        if row is None and message:
             row = 0
             col = 0
 
         return match, row, col, error, warning, message, near
-
-
-class EmbeddedCSS(CSS):
-    language = 'html'
-    selector = 'source.css.embedded.html'
