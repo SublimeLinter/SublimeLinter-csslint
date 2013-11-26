@@ -8,7 +8,7 @@
 # License: MIT
 #
 
-"""This module provides the CSSLint plugin linter class."""
+"""This module exports the CSSLint plugin linter class."""
 
 import re
 
