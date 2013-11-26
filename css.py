@@ -1,14 +1,14 @@
 #
-# css.py
+# csslint.py
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
 # Written by Aparajita Fishman
 #
-# Project: https://github.com/SublimeLinter/SublimeLinter-contrib-css
+# Project: https://github.com/SublimeLinter/SublimeLinter-contrib-csslint
 # License: MIT
 #
 
-"""This module provides the CSSLint linter plugin class."""
+"""This module provides the CSSLint plugin linter class."""
 
 import re
 
