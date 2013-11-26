@@ -8,12 +8,17 @@
 # License: MIT
 #
 
+"""This module provides the CSSLint linter plugin class."""
+
 import re
 
 from SublimeLinter.lint import Linter
 
 
-class CSS(Linter):
+class CSSLint(Linter):
+
+    """Provides an interface to the csslint executable."""
+
     language = ('css', 'html')
     cmd = 'csslint --format=compact'
     regex = r'''
@@ -33,12 +38,18 @@ class CSS(Linter):
     }
 
     def split_match(self, match):
-        match, row, col, error, warning, message, near = super().split_match(match)
+        """
+        Extract and return values from match.
 
-        # csslint can give general errors that apply to the document as a whole.
-        # In that case we pin them to the beginning of the document.
-        if row is None and message:
-            row = 0
+        We override this method so that general errors that do not have
+        a line number can be placed at the beginning of the code.
+
+        """
+
+        match, line, col, error, warning, message, near = super().split_match(match)
+
+        if line is None and message:
+            line = 0
             col = 0
 
-        return match, row, col, error, warning, message, near
+        return match, line, col, error, warning, message, near
