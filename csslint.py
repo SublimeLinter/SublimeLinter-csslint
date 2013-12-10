@@ -21,7 +21,7 @@ class CSSLint(Linter):
 
     language = ('css', 'html')
     cmd = 'csslint --format=compact'
-    regex = r'''
+    regex = r'''(?xi)
         ^.+:\s*   # filename
 
         # csslint emits errors that pertain to the code as a whole,
@@ -30,7 +30,6 @@ class CSSLint(Linter):
         (?:line\ (?P<line>\d+),\ col\ (?P<col>\d+),\ )?
         (?:(?P<error>error)|(?P<warning>warning))\ -\ (?P<message>.*)$
     '''
-    re_flags = re.VERBOSE | re.IGNORECASE
     word_re = r'^(#?[-\w]+)'
     tempfile_suffix = 'css'
     selectors = {
