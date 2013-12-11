@@ -10,8 +10,6 @@
 
 """This module exports the CSSLint plugin linter class."""
 
-import re
-
 from SublimeLinter.lint import Linter
 
 
