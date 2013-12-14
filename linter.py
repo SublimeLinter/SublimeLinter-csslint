@@ -18,7 +18,7 @@ class CSSLint(Linter):
 
     """Provides an interface to the csslint executable."""
 
-    language = ('css', 'html')
+    syntax = ('css', 'html')
     cmd = 'csslint --format=compact'
     regex = r'''(?xi)
         ^.+:\s*   # filename
