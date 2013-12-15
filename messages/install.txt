@@ -1,0 +1,6 @@
+SublimeLinter-csslint
+-------------------------------
+
+This linter plugin for SublimeLinter provides an interface to csslint.
+
+For more information, please see https://github.com/SublimeLinter/SublimeLinter-csslint.
