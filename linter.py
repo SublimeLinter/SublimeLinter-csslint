@@ -33,6 +33,13 @@ class CSSLint(Linter):
     selectors = {
         'html': 'source.css.embedded.html'
     }
+    defaults = {
+        '--errors=,': '',
+        '--warnings=,': '',
+        '--ignore=,': ''
+    }
+    inline_overrides = ('errors', 'warnings', 'ignore')
+    comment_re = r'\s*/\*'
 
     def split_match(self, match):
         """

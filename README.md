@@ -29,6 +29,16 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
 
+In addition to the standard SublimeLinter settings, SublimeLinter-csslint provides its own settings which correspond to the command line options of the same name. All of them may be used as [inline overrides](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-overrides).
+
+|Setting|Description|
+|:------|:----------|
+|errors|A comma-separated list of rules to include as errors|
+|warnings|A comma-separated list of rules to include as warnings|
+|ignore|A comma-separated list of rules to ignore|
+
+To get a list of the available rule names, execute `csslint --list-rules` from a terminal.
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
@@ -41,7 +51,7 @@ If you would like to contribute enhancements or fixes, please do the following:
 Please note that modications should follow these coding guidelines:
 
 - Indent is 4 spaces.
-- Code should pass flake8 and pep257 linters.
+- Code should pass csslint and pep257 linters.
 - Vertical whitespace helps readability, don’t be afraid to use it.
 
 Thank you for helping out!
