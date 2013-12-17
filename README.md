@@ -4,6 +4,7 @@ SublimeLinter-csslint
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [csslint](https://github.com/stubbornella/csslint/wiki). It will be used with files that have the “CSS” syntax, or within `<style>` tags in HTML files.
 
 ## Installation
+SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
 
 ### Linter installation
 Before installing this plugin, you must ensure that `csslint` is installed on your system. To install `csslint`, do the following:
@@ -15,7 +16,7 @@ Before installing this plugin, you must ensure that `csslint` is installed on yo
    npm install -g csslint
    ```
 
-Now you can proceed to install the SublimeLinter-csslint plugin.
+Once csslint is installed, you can proceed to install the SublimeLinter-csslint plugin if it is not yet installed.
 
 ### Plugin installation
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
