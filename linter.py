@@ -28,7 +28,7 @@ class CSSLint(Linter):
         (?:line\ (?P<line>\d+),\ col\ (?P<col>\d+),\ )?
         (?:(?P<error>error)|(?P<warning>warning))\ -\ (?P<message>.*)$
     '''
-    word_re = r'^(#?[-\w]+)'
+    word_re = r'^([#\.]?[-\w]+)'
     tempfile_suffix = 'css'
     selectors = {
         'html': 'source.css.embedded.html'
