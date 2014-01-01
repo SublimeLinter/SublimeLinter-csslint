@@ -1,10 +1,10 @@
 SublimeLinter-csslint
 =========================
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [csslint](https://github.com/stubbornella/csslint/wiki). It will be used with files that have the “CSS” syntax, or within `<style>` tags in HTML files.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [csslint](https://github.com/stubbornella/csslint/wiki). It will be used with files that have the “CSS” syntax, or within `<style>` tags in HTML files.
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
+SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 ### Linter installation
 Before installing this plugin, you must ensure that `csslint` is installed on your system. To install `csslint`, do the following:
@@ -30,9 +30,9 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `csslint`. Among the entries you should see `SublimeLinter-csslint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
+For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-In addition to the standard SublimeLinter settings, SublimeLinter-csslint provides its own settings which correspond to the command line options of the same name. All of them may be used as [inline overrides](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-overrides).
+In addition to the standard SublimeLinter settings, SublimeLinter-csslint provides its own settings which correspond to the command line options of the same name. All of them may be used as [inline overrides](http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-overrides).
 
 |Setting|Description|
 |:------|:----------|
