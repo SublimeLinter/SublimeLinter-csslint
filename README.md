@@ -42,6 +42,8 @@ In addition to the standard SublimeLinter settings, SublimeLinter-csslint provid
 
 To get a list of the available rule names, execute `csslint --list-rules` from a terminal.
 
+You may also use any of the `csslint` configuration options, including `.csslintrc` files and embedded rules. Please see the [csslint documentation](https://github.com/stubbornella/csslint/wiki/Command-line-interface#configuration-files) for more information.
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
