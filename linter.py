@@ -26,7 +26,7 @@ class CSSLint(Linter):
         # in which case there is no line/col information, so that
         # part is optional.
         (?:line\ (?P<line>\d+),\ col\ (?P<col>\d+),\ )?
-        (?:(?P<error>error)|(?P<warning>warning))\ -\ (?P<message>.*)$
+        (?:(?P<error>error)|(?P<warning>warning))\ -\ (?P<message>.*)
     '''
     word_re = r'^([#\.]?[-\w]+)'
     error_stream = util.STREAM_STDOUT
