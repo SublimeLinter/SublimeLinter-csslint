@@ -19,6 +19,9 @@ class CSSLint(Linter):
 
     syntax = ('css', 'html')
     cmd = 'csslint --format=compact'
+    version_args = '--version'
+    version_re = r'v(?P<version>\d+\.\d+\.\d+)'
+    version_requirement = '>= 0.10'
     regex = r'''(?xi)
         ^.+:\s*   # filename
 
