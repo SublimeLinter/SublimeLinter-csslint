@@ -1,7 +1,7 @@
 SublimeLinter-csslint
 =========================
 
-[![Build Status](https://khancdn.eu/badges.php?service=https%3A%2F%2Ftravis-ci.org%2FSublimeLinter%2FSublimeLinter-csslint.png%3Fbranch%3Dmaster)](https://travis-ci.org/SublimeLinter/SublimeLinter-csslint)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-csslint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-csslint)
 
 This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [csslint](https://github.com/stubbornella/csslint/wiki). It will be used with files that have the “CSS” syntax, or within `<style>` tags in HTML files.
 
