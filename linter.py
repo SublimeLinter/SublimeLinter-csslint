@@ -17,7 +17,7 @@ class CSSLint(Linter):
 
     """Provides an interface to the csslint executable."""
 
-    syntax = ('css', 'html')
+    syntax = ('css', 'css3', 'html')
     cmd = 'csslint --format=compact'
     version_args = '--version'
     version_re = r'v(?P<version>\d+\.\d+\.\d+)'
