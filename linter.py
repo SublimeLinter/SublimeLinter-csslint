@@ -53,7 +53,6 @@ class CSSLint(Linter):
         a line number can be placed at the beginning of the code.
 
         """
-
         match, line, col, error, warning, message, near = super().split_match(match)
 
         if line is None and message:
