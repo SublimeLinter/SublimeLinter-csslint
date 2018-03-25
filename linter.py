@@ -1,27 +1,8 @@
-#
-# linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
-#
-# Written by Aparajita Fishman
-# Copyright (c) 2015-2016 The SublimeLinter Community
-# Copyright (c) 2013-2014 Aparajita Fishman
-#
-# License: MIT
-#
-
-"""This module exports the CSSLint plugin linter class."""
-
 from SublimeLinter.lint import Linter, util
 
 
 class CSSLint(Linter):
-    """Provides an interface to the csslint executable."""
-
-    syntax = ('css', 'css3', 'html')
     cmd = 'csslint --format=compact'
-    version_args = '--version'
-    version_re = r'v(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 0.10'
     regex = r'''(?xi)
         ^.+:\s*   # filename
 
@@ -34,16 +15,9 @@ class CSSLint(Linter):
     word_re = r'^([#\.]?[-\w]+)'
     error_stream = util.STREAM_STDOUT
     tempfile_suffix = 'css'
-    selectors = {
-        'html': 'source.css.embedded.html'
-    }
     defaults = {
-        '--errors=,': '',
-        '--warnings=,': '',
-        '--ignore=,': ''
+        'selector': 'source.css'
     }
-    inline_overrides = ('errors', 'warnings', 'ignore')
-    comment_re = r'\s*/\*'
 
     def split_match(self, match):
         """
