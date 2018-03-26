@@ -16,7 +16,10 @@ class CSSLint(Linter):
     error_stream = util.STREAM_STDOUT
     tempfile_suffix = 'css'
     defaults = {
-        'selector': 'source.css'
+        'selector': 'source.css',
+        '--errors=,': '',
+        '--warnings=,': '',
+        '--ignore=,': ''
     }
 
     def split_match(self, match):
