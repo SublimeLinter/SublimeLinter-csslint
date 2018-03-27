@@ -16,7 +16,7 @@ class CSSLint(Linter):
     error_stream = util.STREAM_STDOUT
     tempfile_suffix = 'css'
     defaults = {
-        'selector': 'source.css',
+        'selector': 'source.css - meta.attribute-with-value',
         '--errors=,': '',
         '--warnings=,': '',
         '--ignore=,': ''
