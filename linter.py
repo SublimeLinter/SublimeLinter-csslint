@@ -2,7 +2,7 @@ from SublimeLinter.lint import Linter, util
 
 
 class CSSLint(Linter):
-    cmd = 'csslint --format=compact'
+    cmd = 'csslint --format=compact ${temp_file}'
     regex = r'''(?xi)
         ^.+:\s*   # filename
 
